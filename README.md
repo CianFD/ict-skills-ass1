@@ -1,2 +1,4 @@
-# ict-skills-ass1
-gym web app built from javascript for ice-skill-1 module assignment
+Welcome to the Playlist 1
+=========================
+
+Version 1 of the Playlist application
