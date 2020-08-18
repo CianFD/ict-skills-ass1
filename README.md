@@ -1,4 +1,4 @@
-Welcome to the Playlist 1
+Welcome to the ICT Skills 1 Assignment 
 =========================
 
-Version 1 of the Playlist application
+Version 1 of the Gym App
