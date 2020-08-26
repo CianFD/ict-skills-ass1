@@ -1,0 +1,60 @@
+{
+  "assessmentCollection":
+  [
+        {
+          "memberId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+          "dateAndTime": "01/01/2020 07:27:45",
+          "weight": "145.2",
+          "chest": "37.6",
+          "thigh": "17.4",
+          "upperArm": "12.9",
+          "waist": "30.4",
+          "hips": "29.6",
+          "comment": "Off to a great start!"
+        },
+        {
+          "memberId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+          "dateAndTime": "07/01/2020 08:32:16",
+          "weight": "143.7",
+          "chest": "36.9",
+          "thigh": "17.0",
+          "upperArm": "12.5",
+          "waist": "29.8",
+          "hips": "29.1",
+          "comment": "Keep up the good work!"
+        },
+        {
+          "memberId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+          "dateAndTime": "14/01/2020 06:53:29",
+          "weight": "144.1",
+          "chest": "37.2",
+          "thigh": "17.3",
+          "upperArm": "12.6",
+          "waist": "30.0",
+          "hips": "29.3",
+          "comment": "An unfortunate setback but don't give up!"
+        },
+        {
+          "memberId": "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
+          "dateAndTime": "04/01/2020 16:12:09",
+          "weight": "109.6",
+          "chest": "24.2",
+          "thigh": "11.4",
+          "upperArm": "11.9",
+          "waist": "22.4",
+          "hips": "22.6",
+          "comment": "Happy to be working with you!"
+        },
+        {
+          "memberId": "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
+          "dateAndTime": "14/01/2020 17:24:16",
+          "weight": "109.1",
+          "chest": "24.0",
+          "thigh": "11.1",
+          "upperArm": "11.2",
+          "waist": "22.1",
+          "hips": "22.3",
+          "comment": "Hooray! Keep at it!"
+        }
+  ]
+}
