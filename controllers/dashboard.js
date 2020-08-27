@@ -3,6 +3,7 @@
 const accounts = require("./accounts.js");
 const logger = require("../utils/logger");
 const assessmentStore = require("../models/assessment-store.js");
+const memberStore = require("../models/member-store.js");
 const uuid = require("uuid");
 
 const dashboard = {
@@ -11,13 +12,15 @@ const dashboard = {
     const loggedInMember = accounts.getCurrentMember(request);
     const viewData = {
       title: "Member Dashboard",
-      assessments: assessmentStore.getMemberAssessments(loggedInMember.id)
+      assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
+      member: memberStore.getMemberById(loggedInMember.id)
     };
     logger.info("about to render", assessmentStore.getMemberAssessments());
     response.render("dashboard", viewData);
   },
 
   deleteAssessment(request, response) {
+    const loggedInMember = accounts.getCurrentMember(request);
     const assessmentId = request.params.id;
     logger.debug(`Deleting Assessment ${assessmentId}`);
     assessmentStore.removeAssessment(assessmentId);
@@ -28,8 +31,8 @@ const dashboard = {
     const loggedInMember = accounts.getCurrentMember(request);
     const newAssessment = {
       id: uuid.v1(),
-      userid: loggedInMember.id,
-      dateAndTime: request.body.weight,
+      memberId: loggedInMember.id,
+      dateAndTime: new Date().toUTCString(),
       weight: Number(request.body.weight),
       chest: Number(request.body.chest),
       thigh: Number(request.body.thigh),

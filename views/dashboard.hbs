@@ -1,6 +1,41 @@
 {{> menu id="dashboard"}}
 
-<section class="ui segment">
+
+<section class="ui raised segment">
+  <div class="ui four column middle aligned grid basic segment">
+    <div class="column">
+      <div class="ui icon header">
+        <i class="user icon"></i>
+        <h1> {{member.name}} </h1>
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui icon header">
+        <i class="ui red dashboard icon"></i>
+        <h1>Ideal Weight Indicator</h1>
+      </div>
+    </div>
+    <div class="column">
+        <div class="middle-aligned column">
+          <div class="ui icon">
+            <i class="huge heartbeat icon"></i>
+          </div>
+        </div>
+        <div class="middle-aligned column">
+          <div class="ui header">
+            <h1> {{bmi}} </h1>
+            <h1> BMI </h1>
+          </div>
+        </div>
+    </div>
+    <div class="column">
+      <div class="ui icon header">
+        <i class="doctor icon"></i>
+        <h1> {{bmiCat}} </h1>
+      </div>
+    </div>
+  </div>
   {{> listassessments}}
   {{> addassessment}}
+</section>essment}}
 </section>

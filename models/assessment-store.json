@@ -3,7 +3,8 @@
   [
         {
           "memberId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
-          "dateAndTime": "01/01/2020 07:27:45",
+          "id": "2c39d3w0-86r2-u4i1-e0d3-w2a9q0s6c8e2",
+          "dateAndTime": "Fri, 21 Aug 2020 12:14:39 GMT",
           "weight": "145.2",
           "chest": "37.6",
           "thigh": "17.4",
@@ -14,7 +15,8 @@
         },
         {
           "memberId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
-          "dateAndTime": "07/01/2020 08:32:16",
+          "id": "9s2w3n1p-2wi0-9e1a-8v4d-9w0c8p2l7d5x",
+          "dateAndTime": "Wed, 19 Aug 2020 16:27:08 GMT",
           "weight": "143.7",
           "chest": "36.9",
           "thigh": "17.0",
@@ -25,7 +27,8 @@
         },
         {
           "memberId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
-          "dateAndTime": "14/01/2020 06:53:29",
+          "id": "2c39d3w0-86r2-u4i1-e0d3-w2a9q0s6c8e7",
+          "dateAndTime": "Mon, 17 Aug 2020 13:32:20 GMT",
           "weight": "144.1",
           "chest": "37.2",
           "thigh": "17.3",
@@ -36,7 +39,8 @@
         },
         {
           "memberId": "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
-          "dateAndTime": "04/01/2020 16:12:09",
+          "id": "2c39d3w0-86r2-u4i1-e0d3-w2a9q0s6c8e9",
+          "dateAndTime": "Sat, 22 Aug 2020 19:12:22 GMT",
           "weight": "109.6",
           "chest": "24.2",
           "thigh": "11.4",
@@ -47,7 +51,8 @@
         },
         {
           "memberId": "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
-          "dateAndTime": "14/01/2020 17:24:16",
+          "id": "2c39d3w0-86r2-u4i1-e0d3-w2a9q0s6c8e5",
+          "dateAndTime": "Thu, 20 Aug 2020 21:09:42 GMT",
           "weight": "109.1",
           "chest": "24.0",
           "thigh": "11.1",
