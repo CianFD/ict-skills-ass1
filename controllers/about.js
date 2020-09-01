@@ -9,6 +9,14 @@ const about = {
       title: "About"
     };
     response.render("about", viewData);
+  },
+  
+  trainerabout(request, response) {
+    logger.info("about rendering");
+    const viewData = {
+      title: "About"
+    };
+    response.render("trainerabout", viewData);
   }
 };
 

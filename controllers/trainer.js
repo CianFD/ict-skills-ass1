@@ -12,11 +12,13 @@ const trainerdashboard = {
   index(request, response) {
     logger.info("trainer dashboard rendering");
     const loggedInTrainer = accounts.getCurrentTrainer(request);
+    for (const m of memberStore.getAllMembers()) {
+        m.numAssessments = assessmentStore.getMemberAssessments(m.id).length
+    }
     const viewData = {
       title: "Trainer Dashboard",
       assessments: assessmentStore.getAllAssessments(),
       members: memberStore.getAllMembers(),
-      size: assessmentStore.getMemberAssessments().length,
     };
     response.render("trainerdashboard", viewData);
   },
@@ -30,13 +32,13 @@ const trainerdashboard = {
       title: "Trainer Dashboard",
       trainer: loggedInTrainer,
       member: member,
+      name: memberStore.getMemberById(member).name,
       assessments: assessments,
       bmi: gymUtility.bmi(member),
       bmiCat: gymUtility.bmiCat(member),
       isIdealWeight: gymUtility.isIdealWeight(member)
     };
     response.render("trainermemberview", viewData);
-    
   },
   
   deleteMember(request, response) {
@@ -48,9 +50,8 @@ const trainerdashboard = {
   
   
   comment(request, response) {
-    const loggedInTrainer = accounts.getCurrentTrainer(request);
     const member = memberStore.getMemberById(request.params.id);
-    const assessmentId = request.params.id;
+    const assessmentId = assessmentStore.getAssessment(request.params.id);
     const comment = {
       comment: request.body.comment
     };

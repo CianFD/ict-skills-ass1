@@ -58,6 +58,17 @@
       "upperArm": 12.7,
       "waist": 29.9,
       "hips": 29.2
+    },
+    {
+      "id": "6c8dd830-ec9c-11ea-925f-e3a4da60aaf3",
+      "memberId": "7bc2a550-ec89-11ea-8bcf-3beb0291706e",
+      "dateAndTime": "Tue, 01 Sep 2020 21:45:16 GMT",
+      "weight": 1,
+      "chest": 2,
+      "thigh": 3,
+      "upperArm": 4,
+      "waist": 5,
+      "hips": 6
     }
   ]
 }

@@ -46,7 +46,7 @@ const trainerStore = {
   },
   
   comment(member, comment) {
-    member.comment = comment
+    member.comment = comment;
     this.store.save();
   }
 };

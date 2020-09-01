@@ -52,7 +52,7 @@ const gymutility = {
     let idealWeight = 45.5;
     const metersToInches = 39.3701;
     const kgPerExtraInch = 2.3;
-    let isIdealBodyWeight = false;
+    let isIdealBodyWeight = "";
 
         if (member.gender === (("Male") || ("male") || ("m"))) {
             idealWeight = 50;

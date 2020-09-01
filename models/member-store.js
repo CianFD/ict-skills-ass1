@@ -48,6 +48,8 @@ const memberStore = {
     member.startingWeight = updatedMember.startingWeight;
     this.store.save();
   }
+  
+  
 };
 
 module.exports = memberStore;

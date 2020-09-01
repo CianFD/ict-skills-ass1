@@ -8,7 +8,8 @@
       "gender": "Male",
       "height": "182",
       "startingWeight": "77",
-      "id": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p"
+      "id": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+      "numAssessments": 0
     },
     {
       "name": "Christopher Turk",
@@ -18,7 +19,8 @@
       "gender": "male",
       "height": "181",
       "startingWeight": "80",
-      "id": "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q"
+      "id": "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
+      "numAssessments": 0
     },
     {
       "name": "Elliot Reid",
@@ -28,17 +30,18 @@
       "gender": "female",
       "height": "173",
       "startingWeight": "57",
-      "id": "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r"
+      "id": "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
+      "numAssessments": 0
     },
     {
-      "name": "Teddy",
-      "gender": "Buckland",
-      "email": "ted@buckland.com",
+      "name": "A",
+      "gender": "Male",
+      "email": "a@b.com",
       "password": "secret",
-      "address": "Woopswoop",
-      "height": "190",
-      "startingWeight": "108",
-      "id": "73d699b0-ebc5-11ea-b2e1-473138a28ffb"
+      "address": "123 house",
+      "height": "12",
+      "startingWeight": "46",
+      "id": "7bc2a550-ec89-11ea-8bcf-3beb0291706e"
     }
   ]
 }
