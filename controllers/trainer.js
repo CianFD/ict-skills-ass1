@@ -33,7 +33,7 @@ const trainerdashboard = {
       trainer: loggedInTrainer,
       member: member,
       name: memberStore.getMemberById(member).name,
-      assessments: assessments,
+      assessments: assessments.reverse(),
       bmi: gymUtility.bmi(member),
       bmiCat: gymUtility.bmiCat(member),
       isIdealWeight: gymUtility.isIdealWeight(member)

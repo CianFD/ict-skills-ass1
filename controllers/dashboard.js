@@ -42,7 +42,8 @@ const dashboard = {
       thigh: Number(request.body.thigh),
       upperArm: Number(request.body.upperArm),
       waist: Number(request.body.waist),
-      hips: Number(request.body.hips)
+      hips: Number(request.body.hips),
+      trend: gymUtility.trend
     };
     logger.debug("Adding a new Assessment", newAssessment);
     assessmentStore.addAssessment(newAssessment);

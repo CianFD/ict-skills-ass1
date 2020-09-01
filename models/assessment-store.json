@@ -10,6 +10,7 @@
       "upperArm": "12.9",
       "waist": "30.4",
       "hips": "29.6",
+      "trend": "true",
       "comment": "Off to a great start!"
     },
     {
@@ -22,6 +23,7 @@
       "upperArm": "12.5",
       "waist": "29.8",
       "hips": "29.1",
+      "trend": "true",
       "comment": "Keep up the good work!"
     },
     {
@@ -34,6 +36,7 @@
       "upperArm": "11.9",
       "waist": "22.4",
       "hips": "22.6",
+      "trend": "true",
       "comment": "Happy to be working with you!"
     },
     {
@@ -46,18 +49,8 @@
       "upperArm": "11.2",
       "waist": "22.1",
       "hips": "22.3",
+      "trend": "true",
       "comment": "Hooray! Keep at it!"
-    },
-    {
-      "id": "3565f030-ebc1-11ea-b2e1-473138a28ffb",
-      "memberId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
-      "dateAndTime": "Mon, 31 Aug 2020 19:36:04 GMT",
-      "weight": 77.1,
-      "chest": 37,
-      "thigh": 17.2,
-      "upperArm": 12.7,
-      "waist": 29.9,
-      "hips": 29.2
     },
     {
       "id": "6c8dd830-ec9c-11ea-925f-e3a4da60aaf3",
@@ -69,6 +62,17 @@
       "upperArm": 4,
       "waist": 5,
       "hips": 6
+    },
+    {
+      "id": "7c8eeba0-ecad-11ea-9b94-f5b65f61489b",
+      "memberId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+      "dateAndTime": "Tue, 01 Sep 2020 23:47:25 GMT",
+      "weight": 76.8,
+      "chest": 37,
+      "thigh": 17.2,
+      "upperArm": 12.6,
+      "waist": 30,
+      "hips": 29.2
     }
   ]
 }
