@@ -5,6 +5,7 @@ const logger = require("../utils/logger");
 const assessmentStore = require("../models/assessment-store.js");
 const memberStore = require("../models/member-store.js");
 const uuid = require("uuid");
+const gymUtility = require("../utils/gymutility.js")
 
 const dashboard = {
   index(request, response) {
@@ -12,10 +13,13 @@ const dashboard = {
     const loggedInMember = accounts.getCurrentMember(request);
     const viewData = {
       title: "Member Dashboard",
-      assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
-      member: memberStore.getMemberById(loggedInMember.id)
+      member: memberStore.getMemberById(loggedInMember.id),
+      assessments: assessmentStore.getMemberAssessments(loggedInMember.id).reverse(),
+      bmi: gymUtility.bmi(loggedInMember.id),
+      bmiCat: gymUtility.bmiCat(loggedInMember.id),
+      isIdealWeight: gymUtility.isIdealWeight(loggedInMember.id)
     };
-    logger.info("about to render", assessmentStore.getMemberAssessments());
+    logger.info("about to render ${memberid}");
     response.render("dashboard", viewData);
   },
 
@@ -43,6 +47,29 @@ const dashboard = {
     logger.debug("Adding a new Assessment", newAssessment);
     assessmentStore.addAssessment(newAssessment);
     response.redirect("/dashboard");
+  },
+  
+  edit(request, response) {
+    logger.debug("rendering edit member form");
+    response.render("editmember");
+  },
+  
+  editMember(request, response) {
+    const memberId = request.params.id;
+    const member = accounts.getCurrentMember(request);
+    const updatedMember = {
+      email: request.body.email,
+      name: request.body.name,
+      address: request.body.address,
+      gender: request.body.gender,
+      password: request.body.password,
+      height: request.body.height,
+      startingWeight: request.body.startingWeight
+    };
+    logger.debug(`Updating ${member}`);
+    memberStore.editMember(member, updatedMember);
+    response.redirect("/dashboard");
+    
   }
 };
 

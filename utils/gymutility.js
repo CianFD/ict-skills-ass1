@@ -1,0 +1,78 @@
+"use strict";
+
+const logger = require("../utils/logger");
+const assessmentStore = require("../models/assessment-store.js");
+const memberStore = require("../models/member-store.js");
+const uuid = require("uuid");
+
+const gymutility = {
+  bmi(id) {
+    const member = memberStore.getMemberById(id);
+    const assessments = assessmentStore.getMemberAssessments(id);
+    if (assessments.length === 0) {
+      const bmi = member.startingWeight/((member.height/100)*(member.height/100));
+      return Math.round(bmi * 100) / 100;
+    }
+    else {
+      const bmi = assessments[assessments.length-1].weight/((member.height/100)*(member.height/100));
+      return Math.round(bmi * 100) / 100;
+    }
+  },
+  
+  bmiCat(id) {
+    const member = memberStore.getMemberById(id);
+    const assessments = assessmentStore.getMemberAssessments(id);
+    const bmi = this.bmi(id);
+
+        if (bmi < 16) {
+            return "SEVERELY UNDERWEIGHT";
+        }
+        if (bmi >= 16 && bmi < 18.5) {
+            return "UNDERWEIGHT";
+        }
+        if (bmi >= 18.5 && bmi < 25.0) {
+            return "NORMAL";
+        }
+        if (bmi >= 25.0 && bmi < 30.0) {
+            return "OVERWEIGHT";
+        }
+        if (bmi >= 30.0 && bmi < 35.0) {
+            return "MODERATELY OBESE";
+        }
+        if (bmi >= 35.0) {
+            return "SEVERELY OBESE";
+        }
+        return "NORMAL";
+    },
+  
+  isIdealWeight(id) {
+    const member = memberStore.getMemberById(id);
+    const assessments = assessmentStore.getMemberAssessments(id);
+    const minHeight = 60;
+    let idealWeight = 45.5;
+    const metersToInches = 39.3701;
+    const kgPerExtraInch = 2.3;
+    let isIdealBodyWeight = false;
+
+        if (member.gender === (("Male") || ("male") || ("m"))) {
+            idealWeight = 50;
+        }
+        else {
+            idealWeight = 45.5;
+        }
+        if ((metersToInches * ((member.height/100))) > minHeight) {
+            idealWeight += ((metersToInches * (member.height/100)) - 60) * kgPerExtraInch;
+        }
+        if (assessments.length === 0) {
+          if ((member.startingWeight <= (idealWeight+0.2)) && (member.startingWeight >= (idealWeight-0.2))) {
+            isIdealBodyWeight = true;
+          }
+        }
+        if ((assessments.weight <= (idealWeight+0.2)) && (assessments.weight >= (idealWeight-0.2))) {
+            isIdealBodyWeight = true;
+        }
+        return isIdealBodyWeight;
+  }
+}
+
+module.exports = gymutility;
