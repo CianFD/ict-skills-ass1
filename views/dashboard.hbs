@@ -11,7 +11,12 @@
     </div>
     <div class="column">
       <div class="ui icon header">
-        <i class="ui red dashboard icon"></i>
+        {{#if isIdealWeight}}
+          <i class="green dashboard icon"></i>
+        {{else}}
+          <i class="red dashboard icon"></i>
+        {{/if}}
+        <h1>{{isIdealWeight}}</h1>
         <h1>Ideal Weight Indicator</h1>
       </div>
     </div>
@@ -19,11 +24,11 @@
         <div class="middle-aligned column">
           <div class="ui icon">
             <i class="huge heartbeat icon"></i>
+            <h1> {{bmi}} </h1>
           </div>
         </div>
         <div class="middle-aligned column">
           <div class="ui header">
-            <h1> {{bmi}} </h1>
             <h1> BMI </h1>
           </div>
         </div>
@@ -37,5 +42,5 @@
   </div>
   {{> listassessments}}
   {{> addassessment}}
-</section>essment}}
+</section>
 </section>

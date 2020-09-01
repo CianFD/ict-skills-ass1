@@ -5,9 +5,9 @@
       "email": "j@d.com",
       "password": "secret",
       "address": "Sacred Heart Hospital, 12629 Riverside Drive, Valley Village, CA 91607",
-      "gender": "male",
-      "height": "1.82",
-      "startingWeight": "86",
+      "gender": "Male",
+      "height": "182",
+      "startingWeight": "77",
       "id": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p"
     },
     {
@@ -16,7 +16,7 @@
       "password": "secret",
       "address": "Sacred Heart Hospital, 12629 Riverside Drive, Valley Village, CA 91607",
       "gender": "male",
-      "height": "1.81",
+      "height": "181",
       "startingWeight": "80",
       "id": "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q"
     },
@@ -26,9 +26,19 @@
       "password": "secret",
       "address": "Sacred Heart Hospital, 12629 Riverside Drive, Valley Village, CA 91607",
       "gender": "female",
-      "height": "1.73",
+      "height": "173",
       "startingWeight": "57",
       "id": "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r"
+    },
+    {
+      "name": "Teddy",
+      "gender": "Buckland",
+      "email": "ted@buckland.com",
+      "password": "secret",
+      "address": "Woopswoop",
+      "height": "190",
+      "startingWeight": "108",
+      "id": "73d699b0-ebc5-11ea-b2e1-473138a28ffb"
     }
   ]
 }
