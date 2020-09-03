@@ -5,7 +5,7 @@ const logger = require("../utils/logger");
 const assessmentStore = require("../models/assessment-store.js");
 const memberStore = require("../models/member-store.js");
 const uuid = require("uuid");
-const gymUtility = require("../utils/gymutility.js")
+const gymUtility = require("../utils/gymutility.js");
 
 const dashboard = {
   index(request, response) {
@@ -49,12 +49,12 @@ const dashboard = {
     assessmentStore.addAssessment(newAssessment);
     response.redirect("/dashboard");
   },
-  
+
   edit(request, response) {
     logger.debug("rendering edit member form");
     response.render("editmember");
   },
-  
+
   editMember(request, response) {
     const memberId = request.params.id;
     const member = accounts.getCurrentMember(request);
@@ -70,7 +70,6 @@ const dashboard = {
     logger.debug(`Updating ${member}`);
     memberStore.editMember(member, updatedMember);
     response.redirect("/dashboard");
-    
   }
 };
 

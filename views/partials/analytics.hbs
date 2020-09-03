@@ -1,0 +1,42 @@
+<section class="ui segment">
+  <div class="ui four small statistics">
+    <div class="ui statistic">
+      <div class="value">
+        <i class="user icon"></i>
+      </div>
+      <div class="label">
+      {{member.name}}
+      </div>
+    </div>
+    <div class="ui statistic">
+      <div class="value">
+        {{#if isIdealWeight}}
+          <i class="green dashboard icon"></i>
+        {{else}}
+          <i class="red dashboard icon"></i>
+        {{/if}}
+      </div>
+      <div class="label">
+        Ideal Weight Indicator
+      </div>
+    </div>
+    <div class="ui statistic">
+      <div class="value">
+        <i class="heartbeat icon"></i> {{bmi}}
+      </div>
+      <div class="label">
+        <h3>
+          BMI
+        </h3>
+      </div>
+    </div>
+    <div class="ui statistic">
+      <div class="value">
+        <i class="doctor icon"></i>
+      </div>
+      <div class="label">
+      {{bmiCat}}
+      </div>
+    </div>
+  </div>
+</section>

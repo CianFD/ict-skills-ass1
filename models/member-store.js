@@ -15,13 +15,13 @@ const memberStore = {
     this.store.add(this.collection, member);
     this.store.save();
   },
-  
+
   removeMember(id) {
     const member = this.getMember(id);
     this.store.remove(this.collection, member);
     this.store.save();
   },
-  
+
   getMember(id) {
     return this.store.findOneBy(this.collection, { id: id });
   },
@@ -33,11 +33,11 @@ const memberStore = {
   getMemberByEmail(email) {
     return this.store.findOneBy(this.collection, { email: email });
   },
-  
+
   memberCheckPassword(password) {
     return this.store.findOneBy(this.collection, { password: password });
   },
-  
+
   editMember(member, updatedMember) {
     member.name = updatedMember.name;
     member.email = updatedMember.email;
@@ -47,10 +47,12 @@ const memberStore = {
     member.height = updatedMember.height;
     member.startingWeight = updatedMember.startingWeight;
     this.store.save();
+  },
+
+  comment(assessment, comment) {
+    assessment.comment = comment;
+    this.store.save();
   }
-  
-  
 };
 
 module.exports = memberStore;
-

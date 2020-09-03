@@ -16,13 +16,13 @@ const trainerStore = {
     this.store.add(this.collection, trainer);
     this.store.save();
   },
-  
+
   removeTrainer(id) {
     const trainer = this.getTrainer(id);
     this.store.remove(this.collection, trainer);
     this.store.save();
   },
-  
+
   removeMember(id) {
     const member = this.getMember(id);
     this.store.remove(this.collection, member);
@@ -32,7 +32,7 @@ const trainerStore = {
   getTrainer(id) {
     return this.store.findOneBy(this.collection, { id: id });
   },
-  
+
   getTrainerById(id) {
     return this.store.findOneBy(this.collection, { id: id });
   },
@@ -40,14 +40,9 @@ const trainerStore = {
   getTrainerByEmail(email) {
     return this.store.findOneBy(this.collection, { email: email });
   },
-  
+
   trainerCheckPassword(password) {
     return this.store.findOneBy(this.collection, { password: password });
-  },
-  
-  comment(member, comment) {
-    member.comment = comment;
-    this.store.save();
   }
 };
 

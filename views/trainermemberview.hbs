@@ -2,37 +2,6 @@
 
 
 <section class="ui raised segment">
-    <div class="ui four column middle aligned grid basic segment">
-        <div class="column">
-            <div class="middle aligned ui icon header">
-                <i class="user icon"></i>
-                <h1>{{name}}</h1>
-            </div>
-        </div>
-        <div class="column">
-            <div class="ui icon header">
-                {{#if isIdealWeight}}
-                <i class="green dashboard icon"></i>
-                {{else}}
-                <i class="red dashboard icon"></i>
-                {{/if}}
-                <h1>Ideal Weight Indicator</h1>
-            </div>
-        </div>
-        <div class="column">
-          <div class="middle-aligned column">
-            <h1><i class="large heartbeat icon"></i>{{bmi}} </h1>
-          </div>
-          <div class="middle-aligned header">
-            <h1> BMI </h1>
-          </div>
-        </div>
-        <div class="column">
-            <div class="middle aligned ui icon header">
-                <i class="doctor icon"></i>
-                <h1>{{bmiCat}}</h1>
-            </div>
-        </div>
-    </div>
+    {{> trainerviewanalytics}}
     {{> listtrainerassessments}}
 </section>

@@ -24,6 +24,6 @@ router.get("/trainerdashboard/:id/trainermemberview", trainer.trainerMemberView)
 router.get("/trainerdashboard/deletemember/:id", trainer.deleteMember)
 router.get("/editmember", dashboard.edit);
 router.post("/dashboard/editmember", dashboard.editMember);
-router.post("/addcomment/:id", trainer.comment);
+router.post("/trainermemberview/:id/comment/:assessmentid", trainer.comment);
 
 module.exports = router;

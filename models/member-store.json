@@ -9,7 +9,7 @@
       "height": "182",
       "startingWeight": "77",
       "id": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
-      "numAssessments": 0
+      "numAssessments": 3
     },
     {
       "name": "Christopher Turk",
@@ -20,7 +20,7 @@
       "height": "181",
       "startingWeight": "80",
       "id": "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
-      "numAssessments": 0
+      "numAssessments": 2
     },
     {
       "name": "Elliot Reid",
@@ -32,16 +32,6 @@
       "startingWeight": "57",
       "id": "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
       "numAssessments": 0
-    },
-    {
-      "name": "A",
-      "gender": "Male",
-      "email": "a@b.com",
-      "password": "secret",
-      "address": "123 house",
-      "height": "12",
-      "startingWeight": "46",
-      "id": "7bc2a550-ec89-11ea-8bcf-3beb0291706e"
     }
   ]
 }
