@@ -38,39 +38,53 @@ const accounts = {
     response.render("signup", viewData); //responds to signup button press by redirecting to signup form page
   },
 
-  register(request, response) {
-    const member = request.body;
-    member.id = uuid.v1();
-    const numAssessments = 0;
-    memberstore.addMember(member);
-    logger.info(`registering ${member.email}`);
-    response.redirect("/");
+  register(request, response) { /*creates register command which takes in request by clicking on register button button
+                              and responds by adding a new member with details then redirecting to welcome page*/
+    const member = request.body; //creates member variable which equals the details entered in the sign-up form
+    member.id = uuid.v1(); //variable id of member is set using uuid controller
+    const numAssessments = 0; //variable numAssessments is set for all new Members at 0
+    memberstore.addMember(member); //addMember command from memberstore.js is called adding new Member with details entered in Sign-Up Form.
+    logger.info(`registering ${member.email}`); //log entered in logger detailing that member has been registered
+    response.redirect("/"); //website redirects to welcome page.
   },
 
-  authenticate(request, response) {
-    const member = memberstore.getMemberByEmail(request.body.email);
-    const trainer = trainerstore.getTrainerByEmail(request.body.email);
-    if (member && memberstore.memberCheckPassword(request.body.password)) {
-      response.cookie("member", member.email);
-      logger.info(`logging in ${member.email}`);
-      response.redirect("/dashboard");
-    } else if (trainer && trainerstore.trainerCheckPassword(request.body.password)) {
-      response.cookie("trainer", trainer.email);
-      logger.info(`logging in ${trainer.email}`);
-      response.redirect("/trainerdashboard");
+  authenticate(request, response) { /*creates authenticate command which takes in request by clicking on login button button
+                              and responds by either logging in a member or trainer and opening their relevant
+                              dashboard or otherwise reloading the login page*/
+    const member = memberstore.getMemberByEmail(request.body.email); /*member is set using the getMemberByEmail command from
+                                                                      memberstore taking in the email address entered in the
+                                                                      log in form*/
+    const trainer = trainerstore.getTrainerByEmail(request.body.email); /*member is set using the getTrainerByEmail command from
+                                                                      trainerstore taking in the email address entered in the
+                                                                      log in form*/
+    if (member && memberstore.memberCheckPassword(request.body.password)) { /*if statement taking in value of member entered in email
+                                                                            window and value of password entered in password window
+                                                                            are equal to the details of the member in the member-store.json*/
+      response.cookie("member", member.email); //takes in the cookie of the logging in member
+      logger.info(`logging in ${member.email}`); //adds log statement saying logging in member with the member's e-mail
+      response.redirect("/dashboard"); //opens the members dashboard displaying the logged in members details
+    } else if (trainer && trainerstore.trainerCheckPassword(request.body.password)) { /*if statement taking in value of trainer entered in email
+                                                                            window and value of password entered in password window
+                                                                            are equal to the details of the trainer in the trainer-store.json*/
+      response.cookie("trainer", trainer.email); //takes in the cookie of the logging in trainer
+      logger.info(`logging in ${trainer.email}`); //adds log statement saying logging in trainer with the trainer's e-mail
+      response.redirect("/trainerdashboard"); //opens the trainers dashboard displaying the logged in trainers details
     } else {
-      response.redirect("/login");
+      response.redirect("/login"); /*if neither of the above if statements are successful because the member or
+                                    trainer log-in details are entered incorrectly login view is refreshed*/
     }
   },
 
-  getCurrentMember(request) {
-    const memberEmail = request.cookies.member;
-    return memberstore.getMemberByEmail(memberEmail);
+  getCurrentMember(request) { //command which takes in a request to get the current member who is logged in
+    const memberEmail = request.cookies.member; //sets const memberEmail as the cookies when logging in a member
+    return memberstore.getMemberByEmail(memberEmail); /*returns the result of getMemberByEmail command from the
+                                                          memberstore model taking in the memberEmail const*/
   },
 
   getCurrentTrainer(request) { //command which takes in a request to get the current trainer who is logged in
-    const trainerEmail = request.cookies.trainer;
-    return trainerstore.getTrainerByEmail(trainerEmail);
+    const trainerEmail = request.cookies.trainer; //sets const trainerEmail as the cookies when logging in a trainer
+    return trainerstore.getTrainerByEmail(trainerEmail); /*returns the result of getTrainerByEmail command from the
+                                                          trainerstore model taking in the trainerEmail const*/
   }
 };
 
